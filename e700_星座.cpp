@@ -21,7 +21,7 @@ main(){
 		else{
 			bron = (s[0]-'0')*100+(s[2]-'0');
 		}
-		cout << bron;
+		//cout << bron;
 		if((bron>=1223)||(bron<=120))cout << "¼¯½~®y";
 		else if(bron<=219)cout << "¤ô²~®y";
 		else if(bron<=320)cout << "Âù³½®y";
