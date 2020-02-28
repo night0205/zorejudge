@@ -1,4 +1,4 @@
-//e524_106 ╧Э╤Ё╧е╟о╫фаи_04еэ╕Л╕r╖Pб_
+//e524_106 б╧ц╪б╤бЁб╧ц┘б╟ц▐б╫ц├ц│ц┴_04ц┘ц°б╕ц╛б╕rб╖Pц┌_
 #include<iostream>
 #include<string>
 using namespace std;
