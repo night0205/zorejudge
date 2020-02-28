@@ -1,16 +1,19 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 main(){
 	string s;
-	while(getline(cin, s)){
+	while(cin >> s){
 		int l = s.length();
+		int ans = 0;
 		for(int i = 0; i < l; i++){
-			char n = s[i]-7;
-			cout << n;
+			if(s[i]==' '){
+				ans++;
+			}
 		}
-		cout << '\n';
+		cout << ans << '\n';
+		
 	}
+
 }
