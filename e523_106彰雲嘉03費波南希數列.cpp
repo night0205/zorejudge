@@ -1,4 +1,4 @@
-//e523 106 �����ŰϽ��� - Q3 �O�i�n�ƼƦC
+//e523 106 ¹ü¶³¹Å°Ï½ÆÁÉ - Q3 ¶Oªi«n§Æ¼Æ¦C
 #include<iostream>
 
 using namespace std;
