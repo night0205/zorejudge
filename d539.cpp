@@ -1,55 +1,47 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
-int maxn = 0;
 
-int LC(int i){
-	return i * 2;
+int tree[1000005] = {0};
+
+int build(int tree[], int a, int b){
+	if(a+1 == b)
+		return tree[a];
+	int m = (a+b)/2;
+	int l = build(tree, t, a, m);
+	int r = build(tree, t, m, b);
+	if(l > r)
+		tree[a/2] = l;
+	else
+		tree[a/2] = r;		
 }
-int RC(int i){
-	return i * 2 + 1;
-}
 
-vector<Node> node(4*500001);
-vector<int> s(500001);
-
-struct Node{
-	int max;
-}
-
-void build(int l, int r, int i){
-	if(r == l){
-		node[i].max = s[l];
-		return;
+int find(int a, int b){
+	int max_a, p = a/2;
+	while(p<b){
+		if(){
+			
+		}
 	}
-	int m = (l + r)/2;
-	build(l ,m ,LC(i));
-	build(l, m ,RC(i));
-
-	node[i].max = (node[RC(i).max] > node[LC(i).max]) ? node[RC(i)].max : node[LC(i)].max;
-
 }
 
 main(){
-	int n, m;
+	int n;
 	cin >> n;
-	for(int i = 1; i <= n; i++)
-		cin >> s[i];
-	cin >> m;
-	
-	//build tree -> sort(s, s+n)
-	build(0, n-1, 1);
-	
-	//Q
-	int l, r;
-	while(m--){
-		cin >> l >> r;
-		if(l > r)
-			swap(l, r);
-		l -= 1;
-		r -= 1;
-		maxn = 0;
-		query(0, n-1, 1);
-		cout << maxn << endl;
+	int cnt = 0;
+	for(int i = n; i > 0; i = i/2){
+		cnt += i;
 	}
-} 
+	cnt++ -= n;
+	for(int i = cnt; i < cnt+n; i++)
+		cin >> tree[i];
+	build(tree, 0, n);
+	int q;
+	cin >> q;
+	while(q--){
+		int a, b;
+		cin >> a >> b;
+		cout << find(a, b) << '\n';
+	}
+}
+
